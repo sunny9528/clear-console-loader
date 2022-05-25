@@ -4,9 +4,29 @@
 
 ## options
 
-|options|type|default|desc|
-|--|--|--|--|
-ignore|string[\]|[]|you need to be string or variable to ignore
+| options | type      | default | desc                                        |
+| ------- | --------- | ------- | ------------------------------------------- |
+| ignore  | string[\] | []      | you need to be string or variable to ignore |
+
+## example
+
+```js
+// webpack.config.js
+{
+ module: {
+ rules: [
+  test: /\.js(x?)$/,
+  exclude: /node_modules/,
+  use: [
+  {
+   loader: 'clear-cosnole-loader',
+   options: {
+    ignore: ["err", "error"]
+   }
+  }]
+ }
+}
+```
 
 ## issues
 
