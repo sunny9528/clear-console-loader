@@ -7,7 +7,7 @@ const { getOptions } = require('loader-utils');
 function loader(source) {
   const options = getOptions(this) || {};
   const { ignore } = options;
-  const { ast } = parser.parse(source, {
+  const ast = parser.parse(source, {
     sourceType: 'module',
     plugins: ['jsx', 'flow'],
   });
@@ -62,6 +62,6 @@ function loader(source) {
     },
   });
   const targetCode = generator(ast);
-  return targetCode;
+  return targetCode.code;
 }
 module.exports = loader;
