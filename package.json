@@ -1,7 +1,7 @@
 {
   "name": "clear-console-loader",
   "description": "clear All `console`, you can ignore words",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "lint": "prettier src -c .",
