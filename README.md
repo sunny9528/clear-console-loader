@@ -19,7 +19,7 @@
   exclude: /node_modules/,
   use: [
   {
-   loader: 'clear-cosnole-loader',
+   loader: 'clear-console-loader',
    options: {
     ignore: ["err", "error"]
    }
